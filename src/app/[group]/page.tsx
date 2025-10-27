@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center gap-10 bg-[url('/bg-rcc-mobile.svg')] lg:bg-[url('/bg-rcc.svg')] bg-contain lg:bg-cover bg-no-repeat bg-[position:left_43vh] lg:bg-[position:left_25vh] p-5 lg:p-10 pb-5"
+      className="flex flex-col justify-center items-center gap-10 bg-[url('/bg-rcc-mobile.svg')] lg:bg-[url('/bg-rcc.svg')] bg-cover bg-no-repeat bg-[position:right_30vh] lg:bg-[position:left_25vh] p-5 lg:p-10 pb-5"
     >
       <p className="text-4xl lg:text-6xl text-cyan-900 font-extrabold text-center">
         Assista ao vídeo e<br /> saiba o que Pedro fez…

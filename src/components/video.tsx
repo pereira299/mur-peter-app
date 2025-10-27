@@ -53,11 +53,11 @@ const Video = ({ src, ...props }: VideoProps) => {
 
     return (
         // 'group' é usado para controlar a visibilidade do botão no hover do parent
-        <div onClick={togglePlay} className="relative group max-h-[65vh] lg:max-h-[72vh] rounded-3xl shadow-lg w-full lg:w-9/12 bg-black">
+        <div onClick={togglePlay} className="relative group h-[65vh] lg:h-[72vh] rounded-3xl shadow-lg w-full lg:w-9/12 bg-black">
             <video
                 {...props}
                 ref={videoRef}
-                className="max-h-[65vh] lg:max-h-[72vh] rounded-3xl shadow-lg w-full object-cover"
+                className="h-[65vh] lg:h-[72vh] rounded-3xl shadow-lg w-full object-cover"
             >
                 <source src={src} type="video/mp4" />
                 Seu navegador não suporta o elemento de vídeo.
