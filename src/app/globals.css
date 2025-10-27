@@ -5,14 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-nunito-sans: 'Nunito Sans', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
@@ -24,4 +19,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+* {
+  font-family: var(--font-nunito-sans);
 }

@@ -1,8 +1,33 @@
+'use client';
 import Image from "next/image";
-import Video from "../components/video";
+import Video from "../../components/video";
 import Link from "next/link";
+import { redirect, useParams } from "next/navigation";
+
+const groupList = [
+  { slug: "toledo", link: "https://www.instagram.com/rcctoledopr/" },
+  { slug: "mur", link: "https://www.instagram.com/murtoledo/" },
+  { slug: "utfpr", link: "https://www.instagram.com/gou_filhosdamisericordia" },
+  { slug: "pucpr", link: "https://www.instagram.com/goupuc_toledo" },
+  { slug: "unioeste", link: "https://www.instagram.com/ruahgou" },
+  { slug: "fag", link: "https://www.instagram.com/gou_eadfag" },
+]
+
 
 const Home = () => {
+  const params = useParams();
+  const slug = params.group as string;
+
+  const findGroup = (slug: string) => {
+    const group = groupList.find(g => g.slug === slug);
+    return group ? group.link : null;
+  };
+
+  const groupLink = findGroup(slug);
+  if (!groupLink) {
+    redirect("/");
+  }
+
   return (
     <div
       className="flex flex-col justify-center items-center gap-10 bg-[url('/bg-rcc-mobile.svg')] lg:bg-[url('/bg-rcc.svg')] bg-contain lg:bg-cover bg-no-repeat bg-[position:left_43vh] lg:bg-[position:left_25vh] p-5 lg:p-10 pb-5"
@@ -17,7 +42,7 @@ const Home = () => {
             Clique no botão abaixo e venha
             <br className="max-md:hidden"/> conhecer o Grupo de Oração Universitário
           </p>
-          <Link href="https://www.instagram.com/rcctoledopr/" className="cursor-pointer bg-cyan-900 text-white font-bold px-10 py-2 rounded text-lg lg:text-2xl">
+          <Link href={groupLink} className="cursor-pointer bg-cyan-900 text-white font-bold px-10 py-2 rounded text-lg lg:text-2xl">
             Quero conhecer o GOU
           </Link>
         </div>
