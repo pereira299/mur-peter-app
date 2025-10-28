@@ -35,7 +35,7 @@ const Home = () => {
       <p className="text-4xl lg:text-6xl text-cyan-900 font-extrabold text-center">
         Assista ao vídeo e<br /> saiba o que Pedro fez…
       </p>
-      <Video src="https://pub-7e6a7ffda0494057aa9001ee29a39a74.r2.dev/mur/mur-pedro.mp4" poster="/poster.png" />
+      <Video src="https://pub-7e6a7ffda0494057aa9001ee29a39a74.r2.dev/mur/pedro-mur2.mp4" poster="/poster.png" />
       <div className="flex flex-col justify-center items-center gap-5 w-full">
         <div className="py-5 lg:py-10 flex flex-col justify-center items-center gap-7">
           <p className="text-center font-semibold text-2xl lg:text-4xl">
